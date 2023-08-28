@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <title>App Name: A Code Project By Osvaldo Gomes</title>
+    <title>Rewind: A Code Project By Osvaldo Gomes</title>
 
     <!--Favicon Link-->
     <link rel="icon" href="/img/favicon.ico" type="img/x-icon" />
@@ -45,7 +45,7 @@
             height="24"
             alt="Favicon"
           />
-          APP NAME</a
+          Rewind</a
         >
         <button
           class="navbar-toggler"
@@ -85,17 +85,46 @@
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
         <div class="border-1 border-bottom border-dark">
-          <h5>The Code for APP NAME</h5>
+          <h5>The Code for Rewind</h5>
         </div>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers">
-              <code class="language-javascript">
-                // Call Hello World
-                    function helloWorld() {
-                    alert("Hello world");
-                    }
-              </code>
+              <code class="language-javascript">//Get the string from the page.
+                //Controller fuction
+                function getValue() {
+                  document.getElementById("alert").classList.add("invisible");
+                
+                  let userString = document.getElementById("userString").value;
+                
+                  let revString = reverseString(userString);
+                
+                  displayString(revString);
+                }
+                
+                //Logic function
+                // Reverse the string
+                function reverseString(userString) {
+                  let revString = [];
+                
+                  //Reverse a string using a for loop
+                  for (let index = userString.length - 1; index >= 0; index--) {
+                    revString += userString[index];
+                  }
+                  return revString;
+                }
+                
+                // Display the reversed string to the user
+                function displayString(revString) {
+                  //Write to the page
+                  document.getElementById(
+                    "msg"
+                  ).innerHTML = `Your string reversed is: ${revString}`;
+                
+                  //Show the alert box
+                  document.getElementById("alert").classList.remove("invisible");
+                }
+                </code>
             </pre>
           </div>
           <div class="col-lg-4">
