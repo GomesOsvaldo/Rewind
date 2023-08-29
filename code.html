@@ -128,11 +128,41 @@
             </pre>
           </div>
           <div class="col-lg-4">
-            <p>The code is structured in one function</p>
-            <h5>Hello World</h5>
+            <h5>The Code Documentation</h5>
             <p>
-              Hello World is a function that displays an alert with a message of
-              "Hello World".
+              This code snippet comprises a web application where users input a
+              string. The program then reverses the string and displays the
+              reversed version on the webpage, along with an alert message. The
+              code is organized into functions, simplifying the process of
+              reversing the string and interacting with the webpage elements.
+            </p>
+            <h5>getValue()</h5>
+            <p>
+              This function acts as the main controller, responsible for
+              fetching a user-provided string from the webpage, reversing it,
+              and displaying the reversed string. Hide the alert element by
+              adding the "invisible" class to it. Retrieve the user input string
+              from the webpage element with the ID "userString". Call the
+              reverseString() function with the user-provided string as an
+              argument to obtain the reversed string. Call the displayString()
+              function with the reversed string to showcase it.
+            </p>
+            <h5>reverseString(userString)</h5>
+            <p>
+              This function takes a string (userString) as input and returns the
+              reversed version of the string. Initialize an empty array named
+              revString to store the reversed characters. Use a loop to iterate
+              through the characters of the userString in reverse order: For
+              each iteration, append the current character to the revString.
+              Return the revString, which is the reversed string.
+            </p>
+            <h5>displayString(revString)</h5>
+            <p>
+              This function takes a reversed string (revString) as input and
+              displays it to the user on the webpage, along with an alert. Set
+              the HTML content of the element with the ID "msg" to display the
+              reversed string using a template literal. Remove the "invisible"
+              class from the element with the ID "alert" to show the alert box.
             </p>
           </div>
         </div>
