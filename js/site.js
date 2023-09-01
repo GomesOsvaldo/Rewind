@@ -1,34 +1,47 @@
-//Get the string from the page.
-//Controller fuction
+//Get our user input
 function getValue() {
-  document.getElementById("alert").classList.add("invisible");
-
+  //get user a string from the page
   let userString = document.getElementById("userString").value;
 
-  let revString = reverseString(userString);
+  //make sure alert is invisible
+  document.getElementById("alert").classList.add("invisible");
 
-  displayString(revString);
+  //check for palindrome
+  let returnObjt = checkForPalindrome(userString);
+
+  //Display out message to the screen
+  displaymessage(returnObjt);
 }
 
-//Logic function
-// Reverse the string
-function reverseString(userString) {
-  let revString = [];
+//check if a string is a palindrome
+function checkForPalindrome(userString) {
+  //tac cat
+  userString = userString.toLowerCase();
 
-  //Reverse a string using a for loop
-  for (let index = userString.length - 1; index >= 0; index--) {
+  //remove spaces and special characters
+  let regex = /[^\w]/g;
+  userString = userString.replace(regex, "");
+
+  let revString = [];
+  let returnObj = {};
+
+  for (index = userString.length - 1; index >= 0; index--) {
     revString += userString[index];
   }
-  return revString;
+  if (userString == revString) {
+    returnObj.msg = "Well done! You entered a palindrome";
+  } else {
+    returnObj.msg = "Sorry! You did not enter a palindrome";
+  }
+  returnObj.reversed = revString;
+  return returnObj;
 }
 
-// Display the reversed string to the user
-function displayString(revString) {
-  //Write to the page
+//display a message a message to the screen
+function displaymessage(returnObjt) {
+  document.getElementById("alertHeader").innerHTML = returnObjt.msg;
   document.getElementById(
     "msg"
-  ).innerHTML = `Your string reversed is: ${revString}`;
-
-  //Show the alert box
+  ).innerHTML = `Your phrase reversed is: ${returnObjt.reversed}`;
   document.getElementById("alert").classList.remove("invisible");
 }

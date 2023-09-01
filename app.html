@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <title>Rewind: A Code Project By Osvaldo Gomes</title>
+    <title>Taco Cat: A Code Project By Osvaldo Gomes</title>
 
     <!--Favicon Link-->
     <link rel="icon" href="/img/favicon.ico" type="img/x-icon" />
@@ -41,7 +41,7 @@
             height="24"
             alt="Favicon"
           />
-          Rewind</a
+          Taco Cat</a
         >
         <button
           class="navbar-toggler"
@@ -83,15 +83,18 @@
         <div class="row row-cols-1 row-cols-lg-2 mt-3">
           <div class="col">
             <h1 class="display-5 fw-bold lh-1 mb-3">
-              Rewind: A Coding Project
+              Taco Cat: A Coding Project
             </h1>
             <h5 class="lead">
-              There and back again. Javascript coding exercise using arrays.
-              Writes a program that displays strings in reverse.
+              Taco Cat is a palindrome. Palindrome is a word, phrase, or
+              sequence that reads the same backward as forward. Write a program
+              that checks if a phrase entered is a palindrome.
             </h5>
           </div>
           <div class="col">
-            <h5 class="border-2 border-bottom">Enter A String To Reverse</h5>
+            <h5 class="border-2 border-bottom">
+              Enter a phrase or word to check
+            </h5>
             <form class="row gx-3 gy-2">
               <div class="col">
                 <div>
@@ -99,17 +102,17 @@
                     id="userString"
                     type="text"
                     class="form-control"
-                    placeholder="Enter A String"
-                    aria-label="Enter A String"
+                    placeholder="Taco Cat"
+                    aria-label="Taco Cat"
                   />
                 </div>
                 <div class="col-12">
                   <button
                     type="button"
                     id="btnSubmit"
-                    class="btn btn-danger mt-2"
+                    class="btn btn-dark mt-2"
                   >
-                    Reverse Me
+                    Check It
                   </button>
                 </div>
                 <div
@@ -117,7 +120,7 @@
                   id="alert"
                   role="alert"
                 >
-                  <h4 class="alert-heading">Well Done!</h4>
+                  <h4 id="alertHeader" class="alert-heading">Well done!</h4>
                   <hr />
                   <p class="mb-0" id="msg">
                     <!--Insert A Message Here!-->
